@@ -11,3 +11,11 @@ var hoistedVar = 'hoistedVarValue';
 
 // console.log(hoistedLet);
 let hoistedLet = 'hoistedLetValue';
+
+/** let & const */
+let myLet = 'letValue';
+myLet = 'letVarValue2';
+// let myLet = 'letValue4';
+
+const myConst = 'constValue';
+// myConst = 'constValue2';
