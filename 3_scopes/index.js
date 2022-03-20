@@ -29,7 +29,7 @@ function functionForLocal() {
 
 /************ block scope ************/
 {
-    let myBlockVarWithLet = 6;
+    const myBlockVarWithLet = 6;
 }
 // console.log(myBlockVarWithLet);
 
@@ -37,3 +37,11 @@ function functionForLocal() {
     var myBlockVarWithVar = 7;
 }
 // console.log(myBlockVarWithVar);
+
+function loop() {
+    for(var i=0; i < 5; i++) {
+        console.log(i);
+    }
+    console.log('end: ', i);
+}
+loop();

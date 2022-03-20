@@ -65,5 +65,5 @@ console.group(equalityOperator);
 console.log('"5" === 5', "5" === 5);
 console.log('"5" == 5', "5" == 5);
 console.log('0 == false', 0 == false);
-console.log('NaN == ""', null == undefined);
+console.log('null == undefined', null == undefined);
 console.groupEnd(equalityOperator);

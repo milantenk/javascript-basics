@@ -1,8 +1,11 @@
 /** https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes */
-const object = { myVal: 'myVal' };
-console.log(object);
+const object = { myVal: 'myVal'};
+// console.log(object);
+// const test = object.toString();
+// console.log(test)
 
-// const date = new Date();
+const date = new Date();
+// console.log(date)
 // let obj = date;
 // do {
 //     obj = Object.getPrototypeOf(obj);
@@ -51,4 +54,4 @@ class ActiveClassPerson extends ClassPerson {
     }
 }
 
-// console.log(new ActiveClassPerson('Joe', 25));
+console.log(new ActiveClassPerson('Joe', 25));

@@ -19,3 +19,7 @@ myLet = 'letVarValue2';
 
 const myConst = 'constValue';
 // myConst = 'constValue2';
+const myObj = {ffdf: 'fds'}
+myObj.ffdf='fdsfsfsss2222';
+myObj = {fm:'f'};
+console.log(myObj);

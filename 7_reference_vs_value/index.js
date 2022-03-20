@@ -9,7 +9,7 @@ console.log('val2', val2);
 console.groupEnd(byValue);
 
 /* by reference */
-let obj1 = {myProperty: 'Obj1 Property Value'};
+let obj1 = { myProperty: 'Obj1 Property Value' };
 let obj2 = obj1;
 obj2 = obj1;
 obj2.myProperty = 'Changed Property Value';
@@ -18,3 +18,22 @@ console.group(byReference);
 console.log(obj1);
 console.log(obj2);
 console.groupEnd(byReference);
+
+/* functions */
+const functionsPrimitiveVsReference = 'functionsPrimitiveVsReference';
+console.group(functionsPrimitiveVsReference);
+let primitiveFunctionParam = 2;
+(function (param1) {
+    param1 = 100;
+})(primitiveFunctionParam);
+console.log('primitiveFunctionParam', primitiveFunctionParam);
+
+let objectFunctionParam = { test: 'outsideValue' };
+(function (param1) {
+    param1.test = 'insideValue';
+})(objectFunctionParam);
+console.log('objectFunctionParam', objectFunctionParam);
+console.groupEnd(functionsPrimitiveVsReference);
+
+
+
