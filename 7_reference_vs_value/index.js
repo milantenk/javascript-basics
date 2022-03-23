@@ -11,7 +11,6 @@ console.groupEnd(byValue);
 /* by reference */
 let obj1 = { myProperty: 'Obj1 Property Value' };
 let obj2 = obj1;
-obj2 = obj1;
 obj2.myProperty = 'Changed Property Value';
 const byReference = 'byReference';
 console.group(byReference);
@@ -22,13 +21,13 @@ console.groupEnd(byReference);
 /* functions */
 const functionsPrimitiveVsReference = 'functionsPrimitiveVsReference';
 console.group(functionsPrimitiveVsReference);
-let primitiveFunctionParam = 2;
+const primitiveFunctionParam = 2;
 (function (param1) {
     param1 = 100;
 })(primitiveFunctionParam);
 console.log('primitiveFunctionParam', primitiveFunctionParam);
 
-let objectFunctionParam = { test: 'outsideValue' };
+const objectFunctionParam = { test: 'outsideValue' };
 (function (param1) {
     param1.test = 'insideValue';
 })(objectFunctionParam);

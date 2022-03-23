@@ -16,7 +16,7 @@ const randomPromise = new Promise((resolve, reject) => {
 successPromise
     .then(fulfillResult => console.log(fulfillResult))
     .catch(errorResult => console.error(errorResult))
-    .finally(() => console.info('finally in success'));
+    .finally(() => console.info('finally in success'))
 rejectedPromise
     .then(fulfillResult => console.log(fulfillResult))
     .catch(errorResult => console.error(errorResult))
@@ -28,14 +28,13 @@ randomPromise.then(
 async function AsyncAwaitDemo() {
     const sucessResult = await successPromise;
     console.log(sucessResult);
-
     try {
-        const promiseResult = await rejectedPromise;
+        let promiseResult = await successPromise;
         console.log(promiseResult);
     } catch(errorResult) {
         console.error(errorResult);
     } finally {
-        console.log('async-await finally')
+        console.log('async-await finally');
     }
 }
 AsyncAwaitDemo();
